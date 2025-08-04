@@ -1,0 +1,14 @@
+[package]
+name = 'amnis'
+version = '1.0.0'
+
+[addresses]
+admin = "0x2bfba94e44333039f3562d40edd171661a2e0919d0f242fa8d7556af2a748ffe"
+amnis = "0x111ae3e5bc816a5e63c2da97d0aa3886519e0cd5e4b046659fa35796bd11542a"
+deployer = "0x699381f0461e5da44e59398e1135f431bb31ddbf6e1710c99f9998c64bec0497"
+liquidity_deployer = "0x41fca1c5b399ffb61b94448bd38efd6a893b65496857323412418ea26a12defb"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"

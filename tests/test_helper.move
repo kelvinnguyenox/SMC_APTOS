@@ -14,7 +14,6 @@ module aptos_tutorial::test_helpers {
         TransferRef
     };
 
-
     public fun create_fake_USDC(sender: &signer): (Object<Metadata>, MintRef, TransferRef) {
         let constructor_ref = &object::create_named_object(sender, b"FAKE_USDC");
         let usdc_addr = object::address_from_constructor_ref(constructor_ref);
