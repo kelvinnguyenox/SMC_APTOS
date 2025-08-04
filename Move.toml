@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = []
 
 [addresses]
-aptos_tutorial = "0xcafe" 
+aptos_tutorial = "_" 
 
 [dev-addresses]
 
