@@ -50,7 +50,8 @@ module aptos_tutorial::lock_ammis {
         total_deposit: u64, 
         current_locked: u64,
         total_withdrawn: u64,
-        extend_ref: ExtendRef
+        extend_ref: ExtendRef, 
+        test_only: bool, // for testing purposes
     }
 
         // -- init
@@ -141,15 +142,15 @@ module aptos_tutorial::lock_ammis {
             let obj_signer = &object::generate_signer_for_extending(&extend_ref);
             // let obj_signer = &object::generate_signer(&constructor_ref);
               // Creates the object
-            move_to(
-                sender,
-                LockAccount {
-                    total_deposit: 0, 
-                    current_locked: 0,
-                    total_withdrawn: 0,
-                    extend_ref,
-                }
-            );
+            // move_to(
+            //     sender,
+            //     LockAccount {
+            //         total_deposit: 0, 
+            //         current_locked: 0,
+            //         total_withdrawn: 0,
+            //         extend_ref,
+            //     }
+            // );
         }; 
 
         borrow_global_mut<LockAccount>(addr)
