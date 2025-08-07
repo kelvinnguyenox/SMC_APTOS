@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = []
 
 [addresses]
-aptos_tutorial = "_" 
+aptos_tutorial = "0xb59d0b4df1e4a5002f7c103713704da3a15e9dc2b1d9a63c5fd97f74636684df" 
 
 [dev-addresses]
 

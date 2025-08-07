@@ -16,7 +16,7 @@ module aptos_tutorial::lock_ammis {
 
     use amnis::router;
 
-    // Upgrade contract 
+    // Upgrade contract Nguyen Xuan Quy 1.0.0 version 
     
     // List of error codes
     const E_ALREADY_INITIALIZED: u64 = 1; 
