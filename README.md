@@ -17,3 +17,6 @@ yes
 Transaction submitted: https://explorer.aptoslabs.com/txn/0x864c875c3afe66801d92c90ac9a3948343d37eba85fcf8ccb98bdb4e2f053a93?network=mainnet
 Code was successfully upgraded at object address 0xf0359b44b653a34f4b1a80242e95eb116410fa93284bc8139dae6a83a8bf2bb6
 
+Generate payload: 
+aptos move build-publish-payload --json-output-file payload.json
+

@@ -15,7 +15,7 @@ module aptos_tutorial::lock_ammis {
     use aptos_framework::primary_fungible_store;
 
     use amnis::router;
-
+    
     // Upgrade contract Nguyen Xuan Quy 1.0.0 version 
     
     // List of error codes
@@ -136,6 +136,11 @@ module aptos_tutorial::lock_ammis {
 
     }
 
+    #[view]
+    public fun get_lock_account(): u64 {
+        10
+    }
+    
     inline fun get_or_create_lock_account(sender: &signer): &mut LockAccount acquires LockAccount {
         let addr = signer::address_of(sender);
         if (!exists<LockAccount>(addr)) {
