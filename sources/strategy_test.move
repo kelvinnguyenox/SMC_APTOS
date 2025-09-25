@@ -51,7 +51,7 @@ module aptos_tutorial::strategy_test {
             amounts,
             lp_amount
         );
-
+        
         let thala_staked_obj = object::address_to_object<Metadata>(THALA_STAKE_LP); 
 
         staked_lpt::stake_entry(
@@ -86,6 +86,22 @@ module aptos_tutorial::strategy_test {
             lp_amount,
             amounts,
         );
+    }
+
+    #[view]
+    public fun preview_with_draw(sender_addr: address): vector<u64> {
+        let pool_obj = object::address_to_object<Pool>(THALA_POOL_USDC_USDT);
+        let lp_metadata_obj = object::address_to_object<Metadata>(THALA_POOL_USDC_USDT); 
+
+        let thala_staked_obj = object::address_to_object<Metadata>(THALA_STAKE_LP); 
+        let thala_staked_lp_amount = primary_fungible_store::balance(sender_addr, thala_staked_obj);
+
+        
+        // let lp_amount = primary_fungible_store::balance(sender_addr, lp_metadata_obj); 
+        let amount_obj = pool::preview_remove_liquidity(pool_obj, lp_metadata_obj, thala_staked_lp_amount);
+        let amounts = pool::remove_liquidity_preview_info(amount_obj);
+
+        amounts
     }
 
     #[test_only]

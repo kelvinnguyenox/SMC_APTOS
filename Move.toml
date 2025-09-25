@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = []
 
 [addresses]
-aptos_tutorial = "0x171ac596c972105c292c27c2a2b6463fbc649391fa0f1997c00533e2d133c4cf" 
+aptos_tutorial = "0x6be60fbf2136b9e8945bde4467cfaa3f83ff173fdb1333001233f89accc2893b" 
 usdc = "0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b"
 usdt = "0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b"
 
